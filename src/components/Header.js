@@ -6,7 +6,7 @@ function Header() {
     <header>
       <div className="header-container">
         <div className="header-logo">
-          <img src={image} />
+          <img src={image} alt="scout logo" />
           <h1>Scout</h1>
         </div>
         <div className="header-links">
