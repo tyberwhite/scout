@@ -114,6 +114,7 @@ header {
   width: 9rem;
   margin-right: 0.5rem;
   border: none;
+  font-size: 1.5rem;
   border-radius: 0.5rem;
   background-color: #41658a;
   color: #fff;
@@ -145,6 +146,14 @@ header {
   overflow-x: hidden;
 }
 
+.results p {
+  margin-bottom: 0.5rem;
+}
+
+.results span {
+  font-weight: bold;
+}
+
 #ip-address {
   color: #f75c03;
   margin-bottom: 1rem;
@@ -153,10 +162,20 @@ header {
 footer {
   position: absolute;
   bottom: 0;
-  height: 4rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
   width: 100vw;
   color: #fff;
   background-color: #0a8754;
-  text-align: center;
-  padding-top: 1rem;
+}
+
+footer a {
+  text-decoration: none;
+  color: #fff;
+}
+
+footer a:hover {
+  text-decoration: underline;
 }

@@ -3,7 +3,11 @@ import React from "react";
 function Footer() {
   return (
     <footer>
-      <p>This is a footer</p>
+      <p>
+        <a href="https://ipgeolocation.io/documentation.html">
+          API Documentation
+        </a>
+      </p>
     </footer>
   );
 }

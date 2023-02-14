@@ -8,6 +8,7 @@ async function getGeolocation(apiKey, ip) {
   try {
     const response = await fetch(url);
     const data = await response.json();
+    console.log(data);
     return data;
   } catch (error) {
     console.error(error);
@@ -20,9 +21,38 @@ function Results({ data }) {
       {data && (
         <div>
           <h2 id="ip-address">{data.ip}</h2>
-          <p id="country-name">Country Name: {data.country_name}</p>
-          <p>State: {data.state_prov}</p>
-          <p>City: {data.city}</p>
+          <p>
+            <span>ISP: </span>
+            {data.isp}
+          </p>
+          <p id="country-name">
+            <span>Country Name: </span>
+            {data.country_name}
+          </p>
+          <p>
+            <span>State: </span>
+            {data.state_prov}
+          </p>
+          <p>
+            <span>City: </span>
+            {data.city}
+          </p>
+          <p>
+            <span>Zipcode: </span>
+            {data.zipcode}
+          </p>
+          <p>
+            <span>Latitude: </span>
+            {data.latitude}
+          </p>
+          <p>
+            <span>Longitude: </span>
+            {data.longitude}
+          </p>
+          <p>
+            <span>Current Time: </span>
+            {data.time_zone.current_time}
+          </p>
           <p></p>
         </div>
       )}
