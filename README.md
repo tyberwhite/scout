@@ -1,12 +1,3 @@
-# Scout
-
-Scout is an API based application that provides real-time data based on a user's IP address.
-
-## API
-
-[IP Geolocation](https://ipgeolocation.io/)
-[Documentation](https://ipgeolocation.io/documentation.html)
-
 # IPGeolocation React App
 
 This React app uses the IPGeolocation API to retrieve location data based on a user's IP address. The app provides the user's country, region, city, latitude, longitude, and ISP information.
@@ -31,10 +22,10 @@ Simply enter your IP address in the search bar and hit the "Search" button. The 
 
 This project was built using the following technologies:
 
-React
-IPGeolocation API
-VS Code
-Netlify
+1. [React](https://reactjs.org/)
+2. [IPGeolocation API](https://ipgeolocation.io/)
+3. [Visual Studio Code](https://code.visualstudio.com/)
+4. [Netlify](https://www.netlify.com/)
 
 # Acknowledgments
 
