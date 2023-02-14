@@ -30,7 +30,7 @@ function Search({ onSubmit }) {
           type="text"
           id="search-box-input"
           name="search-box-input"
-          placeholder="85.196.32.148"
+          placeholder="Enter Valid IP Address... "
           required
           value={ipAddress}
           onChange={(event) => setIpAddress(event.target.value)}
