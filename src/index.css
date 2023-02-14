@@ -181,3 +181,8 @@ footer a {
 footer a:hover {
   text-decoration: underline;
 }
+
+.error-message {
+  z-index: 100;
+  color: red;
+}
