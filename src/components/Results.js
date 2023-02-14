@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Search from "./Search";
 
 const API_KEY = process.env.REACT_APP_API_KEY;
-const key = process.env.REACT_APP_API_KEY;
 
 async function getGeolocation(apiKey, ip) {
   const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${ip}`;
