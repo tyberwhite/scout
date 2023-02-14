@@ -1,9 +1,14 @@
 import React, { useState, useEffect } from "react";
 
+function isValidIPAddress(ipAddress) {
+  const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
+  return ipRegex.test(ipAddress);
+}
+
 function Search({ onSubmit }) {
   const [ipAddress, setIpAddress] = useState("");
   const [isValidIp, setIsValidIp] = useState(false);
-  const [buttonClicked, setButtonClicked] = useState(false); // new state variable
+  const [buttonClicked, setButtonClicked] = useState(false);
 
   useEffect(() => {
     const getUserIp = async () => {
@@ -16,22 +21,24 @@ function Search({ onSubmit }) {
 
   const handleClick = (event) => {
     event.preventDefault();
-    onSubmit(ipAddress);
-    setIpAddress("");
-    setButtonClicked(true); // set buttonClicked to true when search button is clicked
+    setButtonClicked(true);
+    if (isValidIp) {
+      onSubmit(ipAddress);
+      setIpAddress("");
+    }
   };
 
   const handleMyIpClick = (event) => {
     event.preventDefault();
-    setIpAddress(ipAddress);
-    onSubmit(ipAddress);
+    // Submit empty string so API defaults to users IP
+    onSubmit("");
+    setIpAddress("");
   };
 
   const handleInputChange = (event) => {
     const inputIp = event.target.value;
     setIsValidIp(isValidIPAddress(inputIp));
     setIpAddress(inputIp);
-    setButtonClicked(false); // reset buttonClicked when input is changed
   };
 
   return (
@@ -47,23 +54,18 @@ function Search({ onSubmit }) {
           onChange={handleInputChange}
         />
 
-        <button type="submit" id="search-box-btn" disabled={!isValidIp}>
+        <button type="submit" id="search-box-btn">
           Search
         </button>
-        <button type="submit" id="my-ip-btn" onClick={handleMyIpClick}>
-          Use My IP
-        </button>
       </form>
-      {buttonClicked && !isValidIp && (
+      <button type="submit" id="my-ip-btn" onClick={handleMyIpClick}>
+        Use My IP
+      </button>
+      {/* {buttonClicked && !isValidIp && (
         <div className="error-message">You must enter a valid IP address</div>
-      )}
+      )} */}
     </div>
   );
-}
-
-function isValidIPAddress(ipAddress) {
-  const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
-  return ipRegex.test(ipAddress);
 }
 
 export default Search;

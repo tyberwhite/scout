@@ -51,7 +51,9 @@ function Results({ data }) {
           </p>
           <p>
             <span>Current Time: </span>
-            {data.time_zone.current_time}
+            {/* data.time_zone.current_time is the only nested object */}
+            {/* Optional chaining operator */}
+            {data.time_zone?.current_time}
           </p>
           <p></p>
         </div>
