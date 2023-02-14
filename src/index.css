@@ -21,6 +21,7 @@ html {
   align-items: center;
   font-family: "Montserrat", sans-serif;
   font-size: 1.6rem;
+  width: 100vw;
 }
 
 header {
@@ -28,6 +29,7 @@ header {
   justify-content: center;
   height: 60px;
   width: 100vw;
+
   background-color: var(--carolinaBlue);
 }
 
@@ -36,8 +38,18 @@ header {
   align-items: center;
   justify-content: space-between;
   width: 900px;
-  margin: 0 30px;
+  margin: 0px 30px;
   color: #fff;
+}
+
+.header-logo {
+  display: flex;
+  align-items: center;
+}
+.header-logo img {
+  width: 3.5rem;
+  height: 3.5rem;
+  margin-right: 1rem;
 }
 
 .header-links ul {
@@ -59,7 +71,7 @@ header {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  width: 100vw;
+  margin: 0rem 30rem;
 }
 
 .hero-section {
@@ -67,12 +79,12 @@ header {
   flex-direction: column;
   align-items: center;
   width: 900px;
-  margin: 75px 30px 0px 30px;
+  margin: 5rem 3rem 0 3rem;
   text-align: center;
 }
 
 .hero-section-header {
-  max-width: 500px;
+  max-width: 50rem;
 }
 
 .hero-section-sub-header {
@@ -85,20 +97,66 @@ header {
 }
 
 #search-box-input {
-  height: 50px;
-  width: 225px;
-  margin-right: 5px;
-  padding: 10px;
+  height: 5rem;
+  width: 30rem;
+  margin-right: 1.5rem;
+  margin-bottom: 5rem;
+  padding: 1rem;
   border: none;
   border-radius: 0.5rem;
-  background-color: #9a99997c;
+  background-color: #37393a;
+  color: #fff;
 }
 
-#search-box-btn {
-  height: 50px;
-  width: 75px;
+#search-box-btn,
+#my-ip-btn {
+  height: 5rem;
+  width: 9rem;
+  margin-right: 0.5rem;
   border: none;
   border-radius: 0.5rem;
   background-color: #41658a;
   color: #fff;
+}
+
+#search-box-btn:hover,
+#my-ip-btn:hover {
+  background-color: #304c68;
+}
+
+#search-box-btn:active,
+#my-ip-btn:active {
+  scale: 0.95;
+}
+
+.results-content-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.results-container {
+  width: 80rem;
+  height: 30rem;
+  padding: 2rem;
+  border-radius: 0.5rem;
+  background-color: #37393a;
+  color: #fff;
+  overflow-x: hidden;
+}
+
+#ip-address {
+  color: #f75c03;
+  margin-bottom: 1rem;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  height: 4rem;
+  width: 100vw;
+  color: #fff;
+  background-color: #0a8754;
+  text-align: center;
+  padding-top: 1rem;
 }

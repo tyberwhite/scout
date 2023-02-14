@@ -1,10 +1,12 @@
 import React from "react";
+import image from "../img/scout-logo.png";
 
 function Header() {
   return (
     <header>
       <div className="header-container">
         <div className="header-logo">
+          <img src={image} />
           <h1>Scout</h1>
         </div>
         <div className="header-links">
