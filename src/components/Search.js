@@ -57,13 +57,14 @@ function Search({ onSubmit }) {
         <button type="submit" id="search-box-btn">
           Search
         </button>
+        <button type="submit" id="my-ip-btn" onClick={handleMyIpClick}>
+          Use My IP
+        </button>
       </form>
-      <button type="submit" id="my-ip-btn" onClick={handleMyIpClick}>
-        Use My IP
-      </button>
-      {/* {buttonClicked && !isValidIp && (
-        <div className="error-message">You must enter a valid IP address</div>
-      )} */}
+
+      {buttonClicked && !isValidIp && (
+        <div className="error-message">Please enter a valid IP address</div>
+      )}
     </div>
   );
 }
