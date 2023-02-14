@@ -16,6 +16,7 @@ html {
 }
 
 .App {
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -136,6 +137,7 @@ header {
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin-bottom: 5rem;
 }
 
 .results-container {
@@ -162,9 +164,7 @@ header {
 }
 
 footer {
-  position: absolute;
-  bottom: 0;
-  margin-top: 5rem;
+  margin-top: auto;
   display: flex;
   justify-content: center;
   align-items: center;
