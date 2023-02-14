@@ -1,7 +1,8 @@
 import React, { useState } from "react";
 import Search from "./Search";
 
-const API_KEY = "ef74ae90c8c94008b2052e5556476a74";
+const API_KEY = process.env.REACT_APP_API_KEY;
+const key = process.env.REACT_APP_API_KEY;
 
 async function getGeolocation(apiKey, ip) {
   const url = `https://api.ipgeolocation.io/ipgeo?apiKey=${apiKey}&ip=${ip}`;
@@ -21,6 +22,9 @@ function Results({ data }) {
         <div>
           <h2 id="ip-address">{data.ip}</h2>
           <p id="country-name">Country Name: {data.country_name}</p>
+          <p>State: {data.state_prov}</p>
+          <p>City: {data.city}</p>
+          <p></p>
         </div>
       )}
     </div>
