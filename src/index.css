@@ -85,11 +85,13 @@ header {
 
 .hero-section-header {
   max-width: 50rem;
+  font-size: 4rem;
 }
 
 .hero-section-sub-header {
   max-width: 600px;
   margin-top: 2rem;
+  font-size: 1.8rem;
 }
 
 .search-container {
@@ -137,7 +139,7 @@ header {
 }
 
 .results-container {
-  width: 80rem;
+  width: 70rem;
   height: 30rem;
   padding: 2rem;
   border-radius: 0.5rem;
@@ -162,6 +164,7 @@ header {
 footer {
   position: absolute;
   bottom: 0;
+  margin-top: 5rem;
   display: flex;
   justify-content: center;
   align-items: center;
