@@ -42,6 +42,7 @@ function Search({ onSubmit }) {
       setIsLoading(false);
       onSubmit("");
       setIpAddress("");
+      setButtonClicked(false);
       console.log("userip: " + userip);
     }, 2000);
   };

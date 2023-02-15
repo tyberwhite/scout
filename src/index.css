@@ -145,8 +145,8 @@ header {
 
 .results-container {
   width: 70rem;
-  height: 30rem;
-  padding: 2rem;
+  height: 32rem;
+  padding: 2.5rem;
   border-radius: 0.5rem;
   background-color: #37393a;
   color: #fff;
@@ -155,13 +155,17 @@ header {
 
 .results p {
   margin-bottom: 0.5rem;
+  color: #4ecdc4;
 }
 
 .results span {
+  color: #fff;
+  font-size: 1.8rem;
   font-weight: bold;
 }
 
 #ip-address {
+  font-size: 3rem;
   color: #f75c03;
   margin-bottom: 1rem;
 }
@@ -189,6 +193,7 @@ footer a:hover {
 .error-message {
   position: absolute;
   bottom: 30px;
+  left: 50px;
   z-index: 100;
   color: red;
   font-size: 1.4rem;
