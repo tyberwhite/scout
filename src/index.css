@@ -69,6 +69,13 @@ header {
   text-decoration: none;
 }
 
+.fab {
+  scale: 1.25;
+}
+.fab:hover {
+  color: var(--oynx);
+}
+
 .content {
   display: flex;
   flex-direction: column;
@@ -89,6 +96,7 @@ header {
 .hero-section-header {
   max-width: 50rem;
   font-size: 4rem;
+  font-weight: 700;
 }
 
 .hero-section-sub-header {
