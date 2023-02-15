@@ -4,16 +4,19 @@ function isValidIPAddress(ipAddress) {
   const ipRegex = /^(\d{1,3}\.){3}\d{1,3}$/;
   return ipRegex.test(ipAddress);
 }
+let userip;
 
 function Search({ onSubmit }) {
   const [ipAddress, setIpAddress] = useState("");
   const [isValidIp, setIsValidIp] = useState(false);
   const [buttonClicked, setButtonClicked] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
 
   useEffect(() => {
     const getUserIp = async () => {
       const res = await fetch("https://api.ipify.org?format=json");
       const data = await res.json();
+      userip = data.ip;
       setIpAddress(data.ip);
     };
     getUserIp();
@@ -23,16 +26,24 @@ function Search({ onSubmit }) {
     event.preventDefault();
     setButtonClicked(true);
     if (isValidIp) {
-      onSubmit(ipAddress);
-      setIpAddress("");
+      setIsLoading(true);
+      setTimeout(() => {
+        setIsLoading(false);
+        onSubmit(ipAddress);
+        setIpAddress("");
+      }, 2000);
     }
   };
 
   const handleMyIpClick = (event) => {
     event.preventDefault();
-    // Submit empty string so API defaults to users IP
-    onSubmit("");
-    setIpAddress("");
+    setIsLoading(true);
+    setTimeout(() => {
+      setIsLoading(false);
+      onSubmit("");
+      setIpAddress("");
+      console.log("userip: " + userip);
+    }, 2000);
   };
 
   const handleInputChange = (event) => {
@@ -65,6 +76,8 @@ function Search({ onSubmit }) {
       {buttonClicked && !isValidIp && (
         <div className="error-message">Please enter a valid IP address</div>
       )}
+
+      {isLoading && <div className="loading-message">Loading...</div>}
     </div>
   );
 }

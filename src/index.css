@@ -1,7 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700&display=swap");
 
 :root {
-  --carolinaBlue: #0a8754;
+  --seaGreen: #0a8754;
+  --oynx: #37393a;
+  --lapisBlue: #41658a;
+  --pantoneOrange: #f75c03;
   --powderWhite: #fdfffc;
 }
 
@@ -30,7 +33,7 @@ header {
   justify-content: center;
   height: 60px;
   width: 100vw;
-  background-color: var(--carolinaBlue);
+  background-color: var(--seaGreen);
 }
 
 .header-container {
@@ -189,4 +192,13 @@ footer a:hover {
   z-index: 100;
   color: red;
   font-size: 1.4rem;
+}
+
+.loading-message {
+  position: absolute;
+  bottom: 5px;
+  left: -80px;
+  color: #db3069;
+  font-weight: 500;
+  font-size: 1.8rem;
 }
